@@ -33,6 +33,7 @@ EditText nombre,apellido,edad,correo;
                     pantalla.putExtra("Edad", edad.getText().toString());
                     pantalla.putExtra("correoelec", correo.getText().toString());
                     startActivity(pantalla);
+                    limpiar();
                 }
                 else{
                     Toast mensaje = Toast.makeText(getApplicationContext(),"El programa se ejecutara si estan los campos llenos", Toast.LENGTH_SHORT);
@@ -40,5 +41,12 @@ EditText nombre,apellido,edad,correo;
                 }
             }
         });
+    }
+    void limpiar()
+    {
+        nombre.setText("");
+        apellido.setText("");
+        edad.setText("");
+        correo.setText("");
     }
 }
